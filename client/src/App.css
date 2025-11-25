@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--background);
+  position: relative;
+  margin: 0;
+  overflow-x: hidden;
+  min-height: 100vh;
+  height: auto;
+  z-index: -30;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*
+.overlay{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.004);
+  backdrop-filter: blur(200px);
+  z-index: -8;
+  top: 0;
+  left: 0;
+}
+
+.circle{
+  position: absolute;
+  z-index: -9;
+  opacity: 0.5;
+}
+
+.blue{
+  background-color: var(--blueBackground-color);
+  opacity: 0.9;
+}
+
+.red{
+  background-color: var(--redBackground-color);
+  opacity: 0.8;
+}
+
+.circle1 {
+  width: 70vw;
+  height: 50vh;
+  top: -2rem;
+  left: 3rem;
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
+
+.circle2 {
+  width: 40vw;
+  height: 50vh;
+  top: 10rem;
+  right: -10rem;
+  transform: rotate(-30.86deg);
+  border-radius: 40%;
+}
+
+.circle3 {
+  width: 38vw;
+  height: 88vh;
+  top: 28rem;
+  right: -10rem;
+  transform: rotate(200deg);
+  border-radius: 20%;
+}
+
+.circle4 {
+  width: 35vw;
+  height: 48vh;
+  top: 40rem;
+  left: 0rem;
+  transform: translateX(-45.8deg);
+  border-radius: 50%;
+}
+
+.circle5 {
+  width: 20vw;
+  height: 20vh;
+  top: 50rem;
+  right: 10rem;
+  border-radius: 50%;
+}
+
+.circle6 {
+  width: 30vw;
+  height: 50vh;
+  top: 60rem;
+  right: 7rem;
+  transform: rotate(-45.8deg);
+  border-radius: 50%;
+}
+
+.circle7 {
+  width: 55vw;
+  height: 35vh;
+  top: 75rem;
+  left: -60rem;
+  transform: translateX(90%);
+  border-radius: 50%;
+}
+
+.circle8 {
+  width: 70vw;
+  height: 78vh;
+  top: 110rem;
+  right: -2rem;
+  transform: translateX(50%);
+  border-radius: 50%;
+}
+
+
+.circle9 {
+  width: 20vw;
+  height: 28vh;
+  top: 150rem;
+  left: 10rem;
+  transform: rotate(20deg);
+  border-radius: 30%;
+}
+
+.circle10 {
+  width: 40vw;
+  height: 40vh;
+  top: 160rem;
+  right: -2rem;
+  transform: rotate(60deg);
+  border-radius: 30%;
+}
+
+.circle11 {
+  width: 40vw;
+  height: 40vh;
+  top: 195rem;
+  left: -2rem;
+  transform: rotate(60deg);
+  border-radius: 50%;
+}
+
+*/

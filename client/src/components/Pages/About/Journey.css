@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700');
+
+body {
+    font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.0625em;
+}
+
+.container {
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.text-muted {
+    color: #edf0f3 !important;
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 4rem;
+}
+
+.timeline {
+    position: relative;
+    padding: 0;
+    list-style: none;
+}
+
+.timeline:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    margin-left: -1px;
+    content: "";
+    background-color: rgb(28, 29, 31);
+}
+
+.timeline>li {
+    position: relative;
+    min-height: 100px;
+    margin-bottom: 100px;
+}
+
+.timeline>li:after,
+.timeline>li:before {
+    display: table;
+    content: " ";
+}
+
+.timeline>li:after {
+    clear: both;
+}
+
+.timeline>li .timeline-panel {
+    position: relative;
+    width: 45%;
+    padding: 0 20px;
+    text-align: left;
+}
+
+.timeline>li .timeline-image {
+    position: absolute;
+    z-index: 100;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    margin-left: -50px;
+    text-align: center;
+    color: white;
+    border: 7px solid white;
+    border-radius: 50%;
+    background-color: #ebedf1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeline>li .timeline-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.timeline>li.timeline-inverted>.timeline-panel {
+    float: right;
+    text-align: left;
+}
+
+.timeline .timeline-heading h4 {
+    margin-top: 0;
+    color: inherit;
+}
+
+.timeline .timeline-heading h4.subheading {
+    text-transform: none;
+}
+
+.timeline .timeline-body>p {
+    margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .timeline>li .timeline-panel {
+        float: left;
+        width: 40%;
+        text-align: right;
+        padding-right: 30px;
+    }
+    .timeline>li.timeline-inverted>.timeline-panel {
+        float: right;
+        text-align: left;
+        padding-left: 30px;
+    }
+    .timeline>li .timeline-image {
+        width: 120px;
+        height: 120px;
+        margin-left: -60px;
+    }
+}
+
+@media (min-width: 992px) {
+    .timeline>li .timeline-panel {
+        width: 40%;
+        padding: 0 40px;
+    }
+    .timeline>li.timeline-inverted>.timeline-panel {
+        padding: 0 40px;
+    }
+    .timeline>li .timeline-image {
+        width: 150px;
+        height: 150px;
+        margin-left: -75px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .timeline>li .timeline-panel {
+        width: 40%;
+        padding: 0 50px;
+    }
+    .timeline>li.timeline-inverted>.timeline-panel {
+        padding: 0 50px;
+    }
+    .timeline>li .timeline-image {
+        width: 170px;
+        height: 170px;
+        margin-left: -85px;
+    }
+}
+
+@media (max-width: 767px) {
+
+  /* Hide the vertical center line on mobile */
+  .timeline::before {
+    display: none;
+  }
+
+  /* List items stack vertically and center all content */
+  .timeline > li {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* This is the key: it centers the children */
+    margin-bottom: 70px;
+    position: relative;
+    width: 100%; /* Ensure full width for centering to work */
+  }
+
+  /* Circle Image - AGGRESSIVE HORIZONTAL RESET */
+  .timeline > li .timeline-image {
+    position: relative; /* Change from absolute if it was set elsewhere */
+    left: auto !important; /* Forcefully disable left positioning */
+    right: auto !important; /* Forcefully disable right positioning */
+    transform: none !important; /* Forcefully disable any transforms like translateX */
+    
+    width: 120px;
+    height: 120px;
+    margin-top: 15px;
+    margin-bottom: 20px; /* Added separation */
+    z-index: 2;
+  }
+
+  /* Timeline Panel (Centered Content) */
+  .timeline > li .timeline-panel {
+    position: relative;
+    width: 85%;
+    /* These ensure horizontal centering within the <li> */
+    margin-left: auto !important; 
+    margin-right: auto !important;
+    text-align: center;
+    padding: 20px 15px;
+    margin-top: 10px;
+    background: rgba(16, 16, 16, 0.15); /* Example background */
+    border-radius: 10px;
+    z-index: 1;
+  }
+
+  /* Inverted Panels (Still Centered) - AGGRESSIVE RESET */
+  .timeline > li.timeline-inverted > .timeline-panel {
+    float: none !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center;
+  }
+
+  /* Center Text Inside Panels */
+  .timeline .timeline-heading h4,
+  .timeline .timeline-heading .subheading,
+  .timeline .timeline-body p {
+    text-align: center;
+  }
+}
